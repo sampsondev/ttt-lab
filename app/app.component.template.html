@@ -1,0 +1,35 @@
+<h1>Let's play tic tac toe</h1>
+
+<br>
+<div>Its {{currentPlayer}}'s turn</div>
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-sm-12" [style.color]="getFontColor()" >Winner is {{displayWinner.thewinner}}
+  	</div>
+  </div>
+  <div class="row" >
+    <div class="col-sm-2 text-center" style="border:solid 1px black" [style.color]="beenPlayed(0,0)" (click)="clickCell(0,0)">
+     {{theboard[0][0]}}
+    </div>
+    <div class="col-sm-2 text-center"  style="border:solid 1px black"  [style.color]="beenPlayed(0,1)" (click)="clickCell(0,1)">
+      {{theboard[0][1]}}
+    </div>
+    <div class="col-sm-2 text-center"  style="border:solid 1px black" [style.color]="beenPlayed(0,2)" (click)="clickCell(0,2)" >
+     {{theboard[0][2]}}
+    </div>
+    <div class="col-sm-6"></div>
+  </div>
+  <div class="row">
+	<div class="col-sm-2 text-center" style="border:solid 1px black;" [style.color]="beenPlayed(1,0)" (click)="clickCell(1,0)" >{{theboard[1][0]}}</div> 
+	<div class="col-sm-2 text-center"  style="border:solid 1px black;" [style.color]="beenPlayed(1,1)" (click)="clickCell(1,1)">{{theboard[1][1]}}</div>
+	<div class="col-sm-2 text-center" style="border:solid 1px black;" [style.color]="beenPlayed(1,2)" (click)="clickCell(1,2)">{{theboard[1][2]}}</div>
+	<div class="col-sm-6" ></div>
+</div>
+<div class="row">
+	<div style="border:solid 1px black;"   (click)="clickCell(2,0)" [style.color]="beenPlayed(2,0)" class="col-sm-2  text-center" >{{theboard[2][0]}}</div> 
+	<div class="col-sm-2 text-center" style="border:solid 1px black;" [style.color]="beenPlayed(2,1)" (click)="clickCell(2,1)" >{{theboard[2][1]}}</div>
+	<div class="col-sm-2 text-center" style="border:solid 1px black;" [style.color]="beenPlayed(2,2)" (click)="clickCell(2,2)" >{{theboard[2][2]}}</div>
+	<div class="col-sm-6" ></div>
+	</div>  
+</div>
+
